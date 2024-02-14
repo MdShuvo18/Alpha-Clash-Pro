@@ -26,19 +26,19 @@
 <body class="font-popins">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home section started -->
-        <section class="min-h-screen home flex flex-col justify-center items-center hidden">
+        <section id="home-section" class="min-h-screen flex flex-col justify-center items-center ">
 
             <div class="flex flex-col items-center gap-10">
-                <h1 class="text-8xl text-white">Alpha Clash Pro</h1>
+                <h1 class="text-8xl text-white font-semibold">Alpha Clash Pro</h1>
                 <h2 class="text-xl text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</h2>
-                <button class="btn btn-active ">Play Now</button>
+                <button onclick="playNow()" class="btn btn-active text-2xl ">Play Now</button>
             </div>
 
         </section>
         <!-- home section ended -->
 
         <!-- play ground section started -->
-        <section class="play-ground flex flex-col justify-center items-center gap-20 pt-20 hidden">
+        <section id="play-ground" class=" hidden flex flex-col justify-center items-center gap-20 pt-20">
             <!-- screen -->
             <div
                 class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
@@ -105,7 +105,7 @@
         <!-- play ground section ended -->
 
         <!-- score section start -->
-        <section class="score flex flex-col justify-center items-center min-h-screen gap-10 ">
+        <section class="score flex flex-col justify-center items-center min-h-screen gap-10 hidden">
 
             <div class="text-white text-center space-y-9 bg-[#FFFFFF33] rounded-xl p-6 ">
                 <h1 class="text-8xl">
@@ -118,6 +118,8 @@
         </section>
         <!-- secore section end -->
     </main>
+
+    <script src="scripts/alpha-clash.js"></script>
 </body>
 
 </html>
