@@ -35,14 +35,21 @@ function keyboardEventHandler(e) {
         const newCurrentScore = currentScore.innerText;
         const finalCurrentScore =parseInt(newCurrentScore);
        
-        
+
         const newScore = finalCurrentScore + 1;
         currentScore.innerText = newScore;
 
         removeBackgrounColorById(newAlphabet)
         continueGame();
     } else {
-        console.log('you lost the point')
+        console.log('you lost the point');
+
+        const currentLife = document.getElementById('current-life');
+        const newCurrentLife = currentLife.innerText;
+        const finalCurrentLife = parseInt(newCurrentLife);
+
+        const newLife = finalCurrentLife - 1;
+        currentLife.innerText = newLife;
     }
 }
 
