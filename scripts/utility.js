@@ -28,4 +28,10 @@ function getRandomAlphabet() {
 function setBackgrounColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-amber-500')
+    return element;
+}
+function removeBackgrounColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-amber-500')
+    return element;
 }
