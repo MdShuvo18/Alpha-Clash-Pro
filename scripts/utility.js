@@ -47,3 +47,10 @@ function setTextElementValueById(elementId, value) {
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
+
+function getElementTextById(e){
+    const element = document.getElementById(e);
+    const text = element.innerText;
+    return text;
+
+}
