@@ -31,25 +31,26 @@ function keyboardEventHandler(e) {
     if (playerPressed === newAlphabet) {
         console.log('you have pressed correctly', newAlphabet);
 
-        const currentScore = document.getElementById('current-score');
-        const newCurrentScore = currentScore.innerText;
-        const finalCurrentScore =parseInt(newCurrentScore);
-       
+        const finalCurrentScore = getTextElementValueById('current-score');
+        const upDatedScore = finalCurrentScore + 1;
+        setTextElementValueById('current-score', upDatedScore);
+        /* ------------------------------ */
+        // const currentScore = document.getElementById('current-score');
+        // const newCurrentScore = currentScore.innerText;
+        // const finalCurrentScore =parseInt(newCurrentScore);
+
 
         const newScore = finalCurrentScore + 1;
-        currentScore.innerText = newScore;
+        // currentScore.innerText = newScore;
 
         removeBackgrounColorById(newAlphabet)
         continueGame();
     } else {
         console.log('you lost the point');
+        const currentLife = getTextElementValueById('current-life');
+        const upDatedLife = currentLife - 1;
+        setTextElementValueById('current-life', upDatedLife);
 
-        const currentLife = document.getElementById('current-life');
-        const newCurrentLife = currentLife.innerText;
-        const finalCurrentLife = parseInt(newCurrentLife);
-
-        const newLife = finalCurrentLife - 1;
-        currentLife.innerText = newLife;
     }
 }
 
